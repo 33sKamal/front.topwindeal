@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none" role="img" aria-label="TopWinDeal">
+  <rect width="48" height="48" rx="12" fill="#047857"/>
+  <path d="M14 16h16a4 4 0 0 1 0 8h-8v8h-6V16zm6 6h10a1.5 1.5 0 1 0 0-3h-10v3z" fill="#fff"/>
+  <circle cx="36" cy="36" r="4" fill="#f97316"/>
+  <text x="58" y="33" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#065f46">TopWinDeal</text>
+</svg>

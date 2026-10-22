@@ -1,0 +1,7 @@
+name = "topwindeal-frontoffice"
+compatibility_date = "2025-07-15"
+pages_build_output_dir = ".output/public"
+
+[vars]
+NUXT_PUBLIC_API_URL = "https://dashboard.topwindeal.com"
+NUXT_PUBLIC_DASHBOARD_URL = "https://dashboard.topwindeal.com"

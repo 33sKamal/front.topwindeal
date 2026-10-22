@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#022c22"/>
+      <stop offset="45%" style="stop-color:#065f46"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#6ee7b7;stop-opacity:0.45"/>
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <ellipse cx="1400" cy="280" rx="420" ry="320" fill="url(#glow)" filter="url(#blur)"/>
+  <ellipse cx="300" cy="800" rx="360" ry="280" fill="#34d399" opacity="0.12" filter="url(#blur)"/>
+  <g opacity="0.15" fill="#ecfdf5">
+    <circle cx="200" cy="180" r="120"/>
+    <circle cx="1700" cy="900" r="200"/>
+    <rect x="1200" y="100" width="180" height="180" rx="40" transform="rotate(25 1290 190)"/>
+  </g>
+  <g font-family="Inter, system-ui, sans-serif" fill="#ecfdf5">
+    <text x="120" y="420" font-size="120" font-weight="800" opacity="0.95">Winning Offers</text>
+    <text x="124" y="500" font-size="42" font-weight="500" opacity="0.85">Temu coupons - verified codes - up to 90% off</text>
+    <text x="124" y="580" font-size="28" font-weight="600" fill="#a7f3d0">Flash sales - new user perks - free shipping deals</text>
+  </g>
+  <g transform="translate(1350 520)">
+    <rect x="0" y="0" width="320" height="200" rx="24" fill="#fff" opacity="0.95"/>
+    <text x="28" y="52" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#047857">TEMU</text>
+    <text x="28" y="110" font-family="Inter, sans-serif" font-size="56" font-weight="800" fill="#065f46">-90%</text>
+    <text x="28" y="155" font-family="Inter, sans-serif" font-size="18" fill="#64748b">Today&apos;s top pick</text>
+  </g>
+  <g transform="translate(1100 720) rotate(-8)">
+    <rect x="0" y="0" width="260" height="140" rx="20" fill="#fff" opacity="0.88"/>
+    <text x="24" y="48" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#f97316">FLASH DEAL</text>
+    <text x="24" y="90" font-family="Inter, sans-serif" font-size="32" font-weight="800" fill="#0f172a">Extra $100 off</text>
+  </g>
+</svg>

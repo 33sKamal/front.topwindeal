@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-50/40 text-slate-800 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full border border-brand-200 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-brand-50;
+  }
+}
+
+.newsletter-backdrop-enter-active,
+.newsletter-backdrop-leave-active {
+  transition: opacity 0.25s ease;
+}
+.newsletter-backdrop-enter-from,
+.newsletter-backdrop-leave-to {
+  opacity: 0;
+}
+
+.newsletter-panel-enter-active {
+  transition: opacity 0.28s ease, transform 0.32s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+.newsletter-panel-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.newsletter-panel-enter-from,
+.newsletter-panel-leave-to {
+  opacity: 0;
+  transform: scale(0.92) translateY(12px);
+}
+
+.hero-fade-slide {
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1.1s ease-in-out, transform 1.4s ease-out;
+  pointer-events: none;
+}
+.hero-fade-slide--active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+/* Keep inactive slides behind active; overlays use z-[2+] in component */
+.hero-fade-slide:not(.hero-fade-slide--active) {
+  z-index: 0;
+}
+
+/* Route transitions */
+.page-enter-active,
+.page-leave-active {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+/* Scroll-triggered section fade */
+.scroll-fade {
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+  transition-delay: var(--scroll-fade-delay, 0ms);
+}
+.scroll-fade.scroll-fade--enabled:not(.scroll-fade--in) {
+  opacity: 0;
+  transform: translateY(22px);
+}
+.scroll-fade.scroll-fade--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: opacity 0.2s ease;
+  }
+  .page-enter-from,
+  .page-leave-to {
+    transform: none;
+  }
+  .scroll-fade,
+  .scroll-fade.scroll-fade--enabled:not(.scroll-fade--in) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
