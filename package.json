@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "pages:build": "NUXT_SSR=false NUXT_PUBLIC_API_URL=https://dashboard.topwindeal.com NUXT_PUBLIC_DASHBOARD_URL=https://dashboard.topwindeal.com nuxt generate",
-    "pages:deploy": "pnpm run pages:build && wrangler pages deploy .output/public --project-name=topwindeal-frontoffice",
+    "pages:deploy": "pnpm run pages:build && wrangler pages deploy dist --project-name=topwindeal",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
